@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="self-style.css">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <!-- 一文字アニメ -->
+  <div class="headerAnimation" id="headerAnimation">
+    <div class="textAnimation" id="textAnimation" >KEIGO OHYAMA</div>
+    <div class="textAnimation">PORTFOLIO</div>
+  </div>
+    <!-- メニュー -->
+    <div class="headerMenuFixed">
+      <div class="headerMenu">
+        <p class="titleName">KEIGO <br> OHYAMA</p>
+        <table class="titleMenu">
+          <tr>
+            <th id='aboutScroll'>about</th><th id='createScroll'>create</th><th id='contactScroll'>contact</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </header>
+
+    <main>
+    <!-- スクロール -->
+    <p class="scrollDownFont">SCROLL</p>
+    <div class="scrollDown"></div>
+    <div class="scrollCircle"></div>
+    <!-- 縦書き -->
+    <div class="fullName" id="fullName"><p>オオヤマ　ケイゴ</p></div>
+    <!-- 時計 -->
+    <div class="clock">
+      <div class="lineHour"></div>
+      <div class="lineMin"></div>
+      <div class="lineSec"></div>
+    </div>
+  
+    <!-- 自己紹介文 -->
+    <div class="profileArea">
+      <div class="selfIntroduction">
+        <p class="selfIntroduction1 allSelfIntroduction">
+          初めまして、大山慶悟と申します。<br>
+          もともと自衛隊として働いていましたが、IT系の分野に興味があり、フロントエンドエンジニアとして活躍できるよう日々勉強中です。<br>
+        </p>
+        <p class="selfIntroduction2 allSelfIntroduction">
+          フロントエンドエンジニアを目指して勉強中ではありますが、難しいことが多く大変なことが多いです。<br>
+          しかし、そんな大変な環境でも挫けずに頑張ってこれたのは、自分の好きなこと、興味を持てたことだからです。<br>
+        </p>
+        <p class="selfIntroduction3 allSelfIntroduction">
+          以前の職では憧れで入った場所ではあったのですが、仕事に関してどうしても好きになれず、興味を持つことが出来ませんでした。<br>
+          そんな環境の中、WEBデザイナーという道を知った僕は、心の底から初めて「この道に進みたい！」と思える職業でした。<br>
+        </p>
+        <p class="selfIntroduction4 allSelfIntroduction">
+          今まで独学で勉強してきて大変なことの連続でしたが、おかげで自己解決能力が身に付きました。<br>
+          周囲に聞ける人がいない環境の中、自分自身の力で調べ、試行錯誤を繰り返し、解決する能力が高まりました。<br>
+        </p>
+        <p class="selfIntroduction5 allSelfIntroduction">
+          この自己解決能力と、以前の職で培ったコミュニケーション能力をは、WEBデザイナーという、０から１を作る職業において、役に立つ能力だと思います。<br>
+        </p>
+        <p class="selfIntroduction6 allSelfIntroduction">
+          twitter<br>
+          <a href="https://twitter.com/mochikunblog">https://twitter.com/mochikunblog</a>
+        </p>
+        <p class="selfIntroduction7 allSelfIntroduction">
+          ブログ<br>
+          <a href="https://mochikunblog.com/">https://mochikunblog.com/</a>
+        </p>
+      </div>
+    </div>
+    <!-- 制作実績 -->
+    <div class="slide">
+      <div class="image-box" id='image-box'>
+        <img src="picture/satoCoffee.png" alt="" id="main-image1" class='main-image'>
+        <img src="picture/waiwaipet.png" alt="" id="main-image2" class='main-image'>
+        <img src="picture/stickmanbattle.png" alt="" id="main-image3" class='main-image'>
+        <img src="picture/pic4.png" alt="" id="main-image4" class='main-image'>
+      </div>
+      <div class="toolbar">
+        <div class="nav">
+          <div id="prev"><img src="picture/left.png" alt="" ></div>
+          <div id="next"><img src="picture/right.png" alt="" ></div>
+        </div>
+      </div>
+
+      <!-- 制作実績サブ -->
+    <div class="subSlide" id="subSlide">
+      <div class="indicator" id="indicator1"></div>
+      <div class="indicator" id="indicator2"></div>
+      <div class="indicator" id="indicator3"></div>
+      <div class="indicator" id="indicator4"></div>
+    </div>
+
+    </div>
+    <div id='slidePicUrl'>
+      <p>
+        Sato Coffee<br>
+        <a href="https://keikei1315.github.io/practice2/">https://keikei1315.github.io/practice2/</a>
+      </p>
+      <p>もちもちペット<br>
+        <a href="https://keikei1315.com">https://keikei1315.com</a>
+      </p>
+      <p>スティックマンバトル<br>
+        <a href="https://keikei1315.github.io/stickmanbattle/">https://keikei1315.github.io/stickmanbattle/</a>
+      </p>
+      <p>もちブログ<br>
+        <a href="https://mochikunblog.com">https://mochikunblog.com</a>
+      </p>
+    </div>
+    
+    <!-- ブログ -->
+    <!-- <div class="blogArea"> -->
+      <!-- <img src="picture/pic4.png" alt="" id="blog-image"> -->
+    <!-- <iframe src="https://mochikunblog.com/" frameborder="0"></iframe>
+    </div> -->
+  </main>
+
+  <footer>
+    <!-- お問い合わせ -->
+    <form action="#">
+      <div class="">
+        <label for="">お名前</label>
+        <input type="text" id="name" name="your-name">
+      </div>
+      <div class="">
+        <label for="">メールアドレス</label>
+        <input type="email" id="email" name="your-email">
+      </div>
+      <div class="">
+        <label for="">メッセージ</label>
+        <textarea name="your-message" id="message" cols="" rows=""></textarea>
+      </div>
+
+      <input type="submit" class="button" value="送信">
+    </form>
+  </footer>
+  <script src="jquery-3.6.0.js"></script>
+  <script src="self-script.js"></script>
+</body>
+</html>

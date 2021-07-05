@@ -1,0 +1,429 @@
+@charset "utf-8";
+/* @import url('https://fonts.googleapis.com/css2？family = New + Tegomin＆ display = swap');  */
+
+@keyframes scrollDownAnime{
+  0%{
+    bottom:115px;
+  }
+  100%{
+    bottom:50px;
+  }
+}
+
+@keyframes showText{
+  0%{
+    transform: translateY(100%);
+  }
+  100%{
+    transform: translateY(0%);
+  }
+}
+
+@keyframes noHeader{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes fullNameOpen{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    text-shadow: black -4px 4px 8px;
+    opacity: 1;
+  }
+}
+@keyframes slideSlide{
+  0%{
+    left: 0;
+  }
+  
+  100%{
+    left: -50px;
+  }
+}
+@keyframes allSelfIntroduction{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+#headerAnimation{
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#headerAnimation.hidden{
+  animation: noHeader 3s;
+  animation-fill-mode: forwards;
+}
+#headerAnimation.noDisplay{
+  display: none;
+}
+
+.textAnimation{
+  color: #fff;
+  font-size: 70px;
+  letter-spacing: .05em;
+}
+.textAnimation:not(:first-of-type){
+  margin-top: 20px;
+}
+
+.textAnimation span{
+display: inline-block;
+}
+.textAnimation > span{
+  overflow: hidden;
+}
+.textAnimation >span>span{
+  animation: showText 1s backwards;
+}
+
+main{
+  margin: 50px auto;
+  padding: 20px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* ヘッダーメニュー */
+.headerMenuFixed{
+  position: fixed;
+  top: 15px;
+  /* max-width: 1000px; */
+  width: 100%;
+  z-index: 10;
+}
+.headerMenu{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgba(204, 199, 199, 0.3);
+}
+.titleMenu th{
+  cursor: pointer;
+}
+
+.titleName{
+  margin: 30px;
+  text-align: center;
+}
+.titleMenu{
+  margin: 30px;
+  width: 300px;
+}
+
+
+/* スクロール */
+.scrollDownFont{
+  position: absolute;
+  bottom:50px;
+  right: 20px;
+  writing-mode: tb-rl;
+  writing-mode:vertical-rl;
+
+}
+.scrollDown{
+  width:2px;
+  height: 65px;
+  background-color: black;
+  position: absolute;
+  bottom:50px;
+  right: 60px;
+}
+.scrollCircle{
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background-color: black;
+  position: absolute;
+  
+  right: 60px;
+  transform: translateX(25%);
+  animation-name: scrollDownAnime;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+/* 縦書きフルネーム */
+#fullName{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height:90vh;
+  opacity: 0;
+  /* transform: translate(-50%,-50%); */
+}
+#fullName.fullNameOpen{
+  animation: fullNameOpen 4s;
+  animation-fill-mode: forwards;
+}
+.fullName p{
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  font-size: 35px;
+  font-family: 'Roboto'、sans-serif;
+  /* text-shadow: black -4px 4px 8px; */
+}
+/* 時計 */
+.clock{
+  border-radius: 50%;
+  border: 3px solid rgb(12, 12, 12);
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  bottom: 30px;
+  left:40px;  
+}
+.lineHour{
+  width: 2.5px;
+  height: 40px;
+  background: rgba(14, 13, 13);
+  position: absolute;
+  top: calc(50% - 40px);
+  left:calc(50% - 1.25px);
+  transform-origin:  bottom;
+}
+.lineMin{
+  width: 1px;
+  height: 50px;
+  background: rgb(15, 15, 15);
+  position: absolute;
+  top: calc(50% - 50px);
+  left:calc(50% - 0.5px);
+  transform-origin:  bottom;
+}
+.lineSec{
+  width: 1px;
+  height: 50px;
+  background: rgb(15, 15, 15);
+  position: absolute;
+  top: calc(50% - 50px);
+  left:calc(50% - 0.5px);
+  transform-origin:  bottom;
+}
+
+
+/* 自己紹介文 */
+.profileArea{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 100px;
+  width: 100%;
+  height: 500px;
+}
+.selfIntroduction{
+  height: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.allSelfIntroduction.show{
+  animation: allSelfIntroduction 3s;
+  animation-fill-mode: forwards;
+}
+.selfIntroduction p{
+  opacity: 0;
+  writing-mode: tb-rl;
+  writing-mode:vertical-rl;
+}
+.selfIntroduction p:nth-child(2){
+  animation-delay: 1s;
+}
+.selfIntroduction p:nth-child(3){
+  animation-delay: 2s;
+}
+.selfIntroduction p:nth-child(4){
+  animation-delay: 3s;
+}
+.selfIntroduction p:nth-child(5){
+  animation-delay: 4s;
+}
+.selfIntroduction p:nth-child(6){
+  animation-delay: 5s;
+}
+.selfIntroduction p:nth-child(7){
+  animation-delay: 6s;
+}
+
+
+/* 制作実績 */
+.slide{
+  position: relative;
+  margin: 0 auto;
+  margin-top: 150px;
+  border:1px solid black;
+  max-width: 1000px;
+  box-shadow: black 2px 2px 4px;
+  background-color: black;
+  overflow: hidden;
+  height: 450px;
+  
+}
+.image-box{
+  height: 400px;
+}
+.slide img{
+  width: 1050px;
+  height:400px;
+  position: absolute;
+}
+.main-image{
+  opacity: 0;
+  left: -35px;
+  transition: 2s;
+}
+.main-image.openSlide{
+  opacity: 1;
+  animation: slideSlide 15s;
+  animation-fill-mode: forwards;
+}
+.toolbar{
+  overflow: hidden;
+  text-align: center;
+}
+.nav{
+  display:flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 950px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+#prev{
+  color: white;
+  width: 30px;
+  height:30px;
+  cursor:pointer;
+}
+#next{
+  color: white;
+  width: 30px;
+  height:30px;
+  cursor:pointer;
+  margin-right: 30px;
+}
+.nav img{
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  opacity: .5;
+}
+/* 制作実績サブ */
+.subSlide{
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.indicator:not(:nth-child(1)){
+  margin-left: 10px;
+}
+.indicator{
+  height: 10px;
+  width:10px;
+  border-radius: 50%;
+  background-color: white;
+  z-index: 10;
+  border: white 2px solid;
+  cursor: pointer;
+}
+
+
+/* 制作実績URL */
+#slidePicUrl{
+ 
+}
+#slidePicUrl p{
+  
+}
+
+
+/* ブログ */
+/* .blogArea{
+  margin: 0 auto;
+  margin-top: 150px;
+  border:1px solid black;
+  max-width: 900px;
+  background-color: black;
+  margin-bottom: 150px;
+}
+
+.blogArea iframe{
+  width: 100%;
+  height: 500px;
+  box-shadow: black 2px 2px 4px;
+} */
+
+/* お問い合わせ */
+/* footer{
+  background-color: black;
+  width: 100%;
+} */
+form{
+  background-color: black;
+  padding: 30px 0px;
+  margin: 0;
+  width: 100%;
+  border-radius: 10px;
+}
+label{
+  color: #fff;
+}
+form div{
+  margin: 15px;
+}
+label{
+  display: block;
+}
+input[type="text"],
+input[type="email"],
+textarea{
+  background: rgba(255, 255, 255, .5);
+border: 1px #fff solid ;
+border-radius: 5px;
+padding: 10px;
+font-size: 1em;
+}
+
+input[type="text"],
+input[type="email"]{
+  width:100%;
+  max-width: 240px;
+}
+
+textarea{
+  width: 100%;
+  max-width: 480px;
+  height:50px;
+}
+
+input[type="submit"]{
+  margin: 15px;
+}
